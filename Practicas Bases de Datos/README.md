@@ -1,0 +1,2 @@
+# Proyectos de bases de datos
+En estos proyectos mostrare mis habilidades al administrar bases de datos, haciendo uso de comandos basicos para manipular bases de datos y tablas, asi como la creacion de consultas, procedimientos almacenados, funciones y triggers.

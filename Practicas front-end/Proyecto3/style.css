@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* 
+    - Estilos predefinidos
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+body{
+    background-color: #171717;
+    padding: 15px;
+    animation: animacionChida ease 1s;
+}
+a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+a:hover{
+    color: #388e3b !important;
+}
+.active{
+    color: #388e3c !important;
+}
+/* 
+    - Estilos nav
+*/
+nav{
+    display: flex;
+    gap: 20px;
+}
+.nav-logo{
+    width: 64px;
+    height: 64px;
+    background-color: #18181b;
+    border: 1px solid #27272a;
+    padding: 10px;
+    border-radius: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-logo i{
+    font-size: 26px;
+    color: #388e3c;
+}
+.nav-links{
+    width: 100%;
+    height: 64px;
+    background-color: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 48px;
+    padding: 0 66px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links a{
+    font-size: 20px;
+}
+.nav-links a.active{
+    font-weight: bold;
+    color: #388e3c;
+}
+
+/* 
+    - about
+*/
+.about{
+    background-color: #18181b;
+    margin-top: 20px;
+    padding: 60px 42px;
+    border: 1px solid #27272a;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.about .items{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.about .items h3{
+    color: #bdbdbd;
+    font-size: 24px;
+    font-weight: 400;
+}
+.about .items .about-info{
+    display: flex; 
+    flex-direction: column;
+    gap: 20px;
+}
+.about .items .about-info h2{
+    font-size: 36px;
+    color: white;
+    font-weight: 500;
+}
+.about .items .about-info p{
+    font-size: 20px;
+    color: #bdbdbd;
+}
+.about .items .about-info .buttons{
+    display: flex;
+    gap: 14px;
+}
+.about-info .buttons button{
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.about-info .buttons .hire{
+    background-color: #388e3c;
+    color: white;
+    border: 1px solid #171717;
+}
+.about-info .buttons .hire:hover{
+    background-color: #4caf50;
+}
+.about-info .buttons .copy{
+    background-color: #171717;
+    color: #bdbdbd;
+    border: 1px solid #27272a;
+}
+.about-info .buttons .copy:hover{
+    background-color: black;
+}
+.about-fotito img{
+    width: 200px;
+    border-radius: 50%;
+    border: 8px solid #2c2c2c;
+    object-fit: cover;
+    margin-top: 70px;
+}
+.about .about-fotito .online, 
+.footer .about-fotito .online{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    border: 1px solid #27272a;
+    border-radius: 14px;
+    background-color: #171717;
+    padding: 4px 15px;
+}
+.about .about-fotito .online i,
+.footer .about-fotito .online i{
+    color: #4caf50;
+    font-size: 9px;
+}
+
+/* 
+    - Estilos Recent works
+*/
+.two-column{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    gap: 20px;
+}
+.two-column .left{
+    background-color: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 15px;
+    padding: 60px 40px;
+}
+.two-column .left > h3{
+    font-size: 24px;
+    color: #bdbdbd;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 70px;
+}
+.two-column .left > h3 i{
+    font-size: 8px;
+}
+.two-column .left .works{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.two-column .left .works .items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.two-column .left .works .items h3{
+    font-size: 24px;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.two-column .left .works .items p{
+    color: #bdbdbd;
+    font-size: 20px;
+}
+/* En esta regla css, primero le damos un display grid para la estructura, generamos dos
+columnas y luego indicamos que la primera fila tomara el 40% de la altura total. La
+altura es calculada en base al tamaño del elemento padre, por lo tanto, la seccion 
+"About my work" tomara el 40% del tamaño total del elemento right.
+En cambio, la segunda fila tomara su altura en base a su contenido, asi que 
+depende totalmente de lo que le pongamos. */
+.two-column .right{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40% auto;
+    gap: 20px;
+}
+/* En este caso, la palabra `span` solamente es una clave que nos permite indicar,
+cuantas columnas debe tomar un elemento, en este caso, queremos que el contenedor
+`about my work` abarque dos columnas, por lo tanto, la clave span nos permite indicar
+el numero de columnas que queremos que tome, en este caso seran 2 columnas */
+.two-column .right .item:first-child{
+    grid-column: span 2;
+}
+.two-column .right .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.two-column .right .item:hover a{
+    color: #388e3c;
+}
+.two-column .right .item a{
+    font-size: 24px;
+    font-weight: 500;
+}
+.two-column .right .item > p{
+    color: #bdbdbd;
+    font-size: 17px;
+    line-height: 26px;
+}
+.two-column .right .item:not(:first-child){
+    gap: 14px;
+}
+.two-column .right .item:not(:first-child) a{
+    font-size: 18px;
+}
+.two-column .right .item:not(:first-child) p{
+    font-size: 15px;
+}
+
+/* 
+    - Estilos footer
+*/
+.footer{
+    padding: 45px;
+    border: 1px solid #27272a;
+    border-radius: 15px;
+    background-color: #18181b;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer > a{
+    font-size: 24px;
+    font-weight: 500;
+}
+.footer .socials{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.footer .socials a{
+    font-size: 20px;
+    font-weight: 500;
+    color: #bdbdbd;
+}
+
+@keyframes animacionChida {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+
+@media screen and (max-width: 1220px) {
+    .about{
+        padding: 60px 30px;
+    }
+    .two-column{
+        display: flex;
+        flex-direction: column;
+    }
+    .two-column .left,
+    .two-column .right  .item,
+    .footer{
+        padding: 40px 30px;
+    }
+    .two-column .right{
+        grid-template-rows: auto auto;
+    }
+}
+@media screen and (max-width: 992px) {
+    nav .nav-links{
+        padding: 0 40px;
+    }
+    .footer > a{
+        font-size: 20px;
+    }
+    .footer .socials a{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 768px) {
+    nav .nav-links a{
+        font-size: 16px;
+    }
+    .about{
+        flex-direction: column-reverse;
+        gap: 20px;
+        padding: 30px;
+    }
+    .about .items{
+        gap: 30px;
+    }
+    .about-fotito img{
+        margin-top: 20px;
+    }
+    .footer .about-fotito{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .about .items .about-info h2{
+        font-size: 30px;
+    }
+    .about .items .about-info p,
+    .two-column .left .works .items  p{
+        font-size: 16px;
+    }
+    .about .items .about-info .buttons button{
+        font-size: 14px;
+    }
+    .two-column .left > h3{
+        margin-bottom: 40px;
+    }
+    .two-column .left .works .items .item h3,
+    .two-column .right .item a{
+        font-size: 20px;
+    }
+    .two-column .right .item > p,
+    .two-column .right .item:not(:first-child) a{
+        font-size: 15px;
+    }
+    .two-column .right .item:not(:first-child) p{
+        font-size: 13px;
+    }
+}
+

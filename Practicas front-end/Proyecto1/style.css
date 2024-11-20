@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* --- Estilos predefinidos --- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    object-fit: cover;
+}
+
+h2{
+    font-weight: 400;
+}
+
+/* --- 
+    Estilos nav
+   ---- */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    border: 1px solid #e8e8e8;
+    padding: 10px ;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 16px;
+}
+nav .logo{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+nav .logo p{
+    font-weight: 600;
+}
+nav .logo img{
+    width: 35px;
+}
+
+nav .nav-links{
+    display: flex;
+    gap: 24px;
+    
+}
+nav .nav-links a {
+    font-size: 14px;
+    color: #606060;
+    transition: all .3s ease;
+}
+nav .nav-links a:hover{
+    color: #000;
+}
+
+nav button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 122px;
+    height: 32px;
+    font-size: 14px;
+    background-color: #000;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all .3s ease;
+}
+nav button:hover,
+.creative .left-section .top .buttons button.doc:hover,
+.contact .items .item button:hover{
+    color: black;
+    background-color: white;
+    border-color: #dedede;
+}
+nav button i{
+    font-size: 25px;
+}
+
+/* --- 
+    Estilos creative
+   ---- */
+.creative{
+    display: flex;
+    margin-top: 80px;
+    padding: 0 80px;
+    justify-content: center;
+    align-items: center;
+    /*
+    - 100vh. es el 100% de la altura de la ventana
+    - 100%. Es el 100% del elemento padre o contenedor
+    */
+    height: calc(100vh - 80px);
+    gap: 40px;
+}
+.creative .left-section{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.creative .left-section .top h2{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.creative .left-section .top p{
+    color: #606060;
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+.creative .left-section .top .buttons{
+    display: flex;
+    gap: 8px;
+}
+.creative .left-section .top .buttons button, 
+.project .inner button,
+.contact .items .item button{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid #dedede;
+    background-color: white;
+    transition: all .3s ease;
+}
+.creative .left-section .top .buttons button.doc, 
+.contact .items .item button{
+    background-color: #000;
+    color: white;
+}
+.creative .left-section .top .buttons button.git:hover {
+    background-color: #000;
+    color: white;
+}
+.creative .left-section .top .buttons i{
+    font-size: 30px;
+}
+.creative .left-section .bottom p{
+    color: #606060;
+    margin-bottom: 10px;
+}
+.creative .left-section .bottom .icons{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    gap: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    width: fit-content;
+}
+.creative .left-section .bottom i{
+    font-size: 20px;
+}
+.creative > img{
+    max-width: 520px;
+    width: 44%;
+    border-radius: 26px;
+}
+
+/* --- 
+    Estilos about
+   ---- */
+.about{
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.about > p{
+    background-color: white;
+    color: #606060;
+    border: 1px solid #e8e8e8;
+    padding: 5px 15px;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+.about > h2{
+    margin-bottom: 30px;
+}
+.about .items{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.about .items .item{
+    width: 26%;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    background-color: #f1f1f1;
+    padding-bottom: 30px;
+}
+.about .items .item .inner{
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+    background-color: white;
+    border-radius: 16px;
+    min-height: 440px;
+}
+.about .items .item .inner a{
+    display: block;
+    padding: 10px 0;
+    font-size: 18px;
+    color: black;
+}
+.about .items .item .inner{
+    color: #606060;
+    font-size: 18px;
+}
+.about .items .item .inner img{
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* --- 
+    Estilos Project
+   ---- */
+.project{
+    background-color: #f5f5f5;
+    padding: 0px 30px;
+}
+.project .inner{
+    background-color: #1f1f1f;
+    color: white;
+    padding: 70px;
+    border-radius: 25px;
+}
+.project .inner .debug{
+    border: 1px solid #484848;
+    border-radius: 18px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: inline-block;
+    padding: 8px 10px;
+    color: #d8d8d8;
+}
+.project .inner .debug i, .project .inner button > i{
+    font-size: 18px;
+}
+.project .inner h2{
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+.project .inner .info {
+    font-size: 18px;
+    color: #d8d8d8;
+    margin-bottom: 20px;
+}
+.project .inner button{
+    padding: 10px 20px;
+    margin-bottom: 40px;
+}
+.project .inner .items{
+    display: flex;
+    gap: 30px;
+}
+.project .inner .items .item{
+    width: 24%;
+    height: 250px;
+    border: 1px solid #464646;
+    border-radius: 12px;
+    background-color: #262626;
+    padding: 25px;
+}
+.project .inner .items .item i{
+    background-color: #303030;
+    border: 1px solid #424242;
+    border-radius: 10px;
+    font-size: 45px;
+    padding: 10px;
+    width: fit-content;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.project .inner .items .item a{
+    display: block;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 14px;
+}
+.project .inner .items .item p{
+    color: #a1a1a1;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* --- 
+    Estilos contact
+   ---- */
+.contact{
+    background-color: #f5f5f5;
+    padding: 100px 60px;
+}
+.contact h2{
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+.contact .items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .items .item{
+    padding: 30px;
+    width: 50%;
+    border: 1px solid #dedede;
+    background-color: white;
+}
+.contact .items .item:nth-child(1){
+    border-radius: 12px 0 0 12px;
+}
+.contact .items .item:nth-child(2){
+    border-radius:0 12px 12px 0;
+}
+.contact .items .item a{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    display: inline-block;
+    color: black;
+}
+.contact .items .item p{
+    font-size: 20px;
+    color: #606060;
+    margin-bottom: 16px;
+}
+
+/* --- 
+    Estilos footer
+   ---- */
+footer {
+    background-color: #1f1f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 25px 25px 0 0;
+    gap: 30px;
+}
+footer a,
+footer p{
+    color: #606060;
+    font-size: 14px;
+    transition: all .3s ease;
+}
+footer a:hover {
+    color: white;
+}
+
+/*
+---
+    Diseño responsivo
+---
+*/
+@media screen and (max-width: 1280px) {
+    /* Creative */
+    .creative .left-section .top h2 {
+        font-size: 25px;
+    }
+    .creative .left-section .top p{
+        font-size: 14px;
+    }
+    .creative .left-section .top .buttons button,
+    .project .inner > .button, 
+    .contact .items .item button {
+        font-size: 14px;
+        padding:  8px 14px;
+    }
+    .creative .left-section .top .buttons button i {
+        font-size: 18px;
+    }
+
+    /* About */
+    .about .items .item .inner {
+        min-height: 340px;
+    }
+    .about .items .item .inner a,
+    .project .inner > .info, 
+    .contact .items .item p{
+        font-size: 15px;
+    }
+    .about .items .item .inner p{
+        font-size: 13px;
+    }
+
+    /* Project */
+    .project .inner .items {
+        flex-wrap: wrap;
+    }
+    .project .inner .items .item {
+        width: 46%;
+        height: 220px;
+    }
+
+    /* Contact */
+    .contact .items .item a{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    /* Creative */
+    .creative {
+        margin-top: 100px;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100vh - 100px);
+    }
+    .creative .left-section {
+        gap: 20px;
+        align-items: center;
+    }
+    .creative .left-section .top {
+        text-align: center;
+    }
+    .creative .left-section .top .buttons {
+        justify-content: center;
+    }
+
+    /* About */
+    .about .items{
+        flex-wrap:  wrap;
+    }
+    .about .items .item{
+        width: 40%;
+    }
+
+    /* project */
+    .project .inner .items .item {
+        height: 250px;
+    }
+
+    /* Contact */
+    .contact .items .item button{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav,
+    nav .nav-links {
+        gap: 16px;
+    }
+    nav button {
+        display: none;
+    }
+
+    .creative{
+        padding: 0 40px;
+    }
+    .creative > img{
+        width: 55%;
+    }
+
+    .about > h2 {
+        font-size: 18px;
+    }
+    .about .items .item{
+        width: 100%;
+    }
+    .about .items .item img{
+        height: 65%;
+        max-height: 250px;
+    }
+
+    .project .inner {
+        padding: 50px 40px;
+    }
+    .project .inner > h2 {
+        font-size: 24px;
+    }
+    .project .inner .info {
+        font-size: 13px;
+    }
+    .project .inner button {
+        width: 100%;
+        font-size: 16px;
+    }
+    .project .inner .items .item {
+        width: 100%;
+        height: 170px;
+    }
+    .project .inner .items .item i {
+        font-size: 28px;
+    }
+    .project .inner .items .item a {
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+    .project .inner .items .item p{
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .contact {
+        padding: 100px 40px;
+    }
+    .contact > h2 {
+        font-size: 22px;
+    }
+    .contact .items {
+        flex-wrap: wrap;
+    }
+    .contact .items .item {
+        width: 100%;
+    }
+    .contact .items .item:nth-child(1) {
+        border-radius: 12px 12px 0 0;
+    }
+    .contact .items .item:nth-child(2) {
+        border-radius: 0 0 12px 12px;
+    }
+
+    footer {
+        gap: 20px;
+    }
+    footer a,
+    footer p {
+        font-size: 11px;
+
+    }
+}

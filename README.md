@@ -1,1 +1,2 @@
 # Portafolio
+Este es mi portafolio en donde muestro mis principales habilidades como programador. Encontraran Proyectos de Bases de datos relacionales, proyectos de desarrollo web enfocados en el front-end y proyectos de Java que he tenido la oportunidad de trabajar en mi universidad y me han resultado muy interesantes.
